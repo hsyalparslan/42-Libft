@@ -1,8 +1,7 @@
 #include <stdio.h>
-int ft_isdigit(int c);
+int ft_strlen(int c);
 int main (void)
 	{
-		int c;
-		c = '8';
-		printf("%i", ft_isdigit(c));
+		char c[] = "TEST";
+		printf("%i", ft_strlen(c));
 	}
