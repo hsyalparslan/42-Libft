@@ -1,11 +1,17 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-void *ft_memmove(void *dst, const void *src, size_t len);
-int main (void)
-	{
-		char *a = strdup("Whatever");
-		char *b = strdup("CopyThis");
-		printf("%s", (char *)ft_memmove(a, b, 6));
-		return (0);
-	}
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int n);
+
+int	main(void)
+{
+
+	char src[] = "y this.";
+	char dest[] = "destination string.";
+	char src2[] = "y this.";
+    char dest2[1909] = "destination string.";
+
+	ft_strlcpy(dest, src, 5);
+	strlcpy(dest2, src2, 5);
+	printf("%s", dest);
+	printf("\n%s", dest2);
+}
