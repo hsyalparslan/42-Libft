@@ -23,28 +23,24 @@ int	ft_strlen(char *str)
 //	write(1, &len, 1);
 }
 
-size_t	ft_strlcpy(char *dest, char *src, size_t size)
+size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
 	size_t	i;
 	size_t	srclen;
+	size_t	dstlen;
 	ft_strlen(src);
 	srclen = ft_strlen(src);
+	dstlen = ft_strlen(dest);
 	i = 0;
-	if (srclen < size)
+	if (size <= dstlen || size == 0)
 	{
-		while (src[i++] )
-		{
-			dest[i] = src[i];
-		}
+		return (size + srclen);
 	}
-	else if (size != 0)
+	while (src[i] != '\0' && i < size - dstlen - 1)
 	{
-		while (i < size - 1)
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
+		dest[i + dstlen] = src[i];
+		i++;
 	}
-	return (srclen);
+	dest[i + dstlen] = '\0';
+	return (dstlen + srclen);
 }
