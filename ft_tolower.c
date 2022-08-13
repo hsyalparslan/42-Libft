@@ -1,8 +1,20 @@
-#include <unistd.h>
-int ft_toupper(int c)
-{
-    if (c > 64 && c < 91)
-        return(c + 32);
-    return (c);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: harslan <harslan@student.42istanbul.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/13 17:10:19 by harslan           #+#    #+#             */
+/*   Updated: 2022/08/13 17:14:58 by harslan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "libft.h"
+
+int	ft_tolower(int c)
+{
+	if (c > 64 && c < 91)
+		return (c + 32);
+	return (c);
 }

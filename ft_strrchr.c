@@ -1,24 +1,31 @@
-#include <unistd.h>
-int ft_strlen(char *c)
-{
-	int n;
-	while (c[n] != '\0')
-	{
-		n++;
-	}
-	return n;
-}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: harslan <harslan@student.42istanbul.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/13 17:09:58 by harslan           #+#    #+#             */
+/*   Updated: 2022/08/13 17:35:12 by harslan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_strrchr(const char *s, int c);
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
 {
-    size_t i;
-    k = (char)c;
-    i = ft_strlen(s);
-    while (s[i] != '\0')
-    {
-        if (s[i] == k)
-            return((char *)s + i);
-        i--;
-    }
-    return(0);
+	char	*save;
+	char	k;
+
+	k = c;
+	save = NULL;
+	while (*s)
+	{
+		if (*s == k)
+			save = (char *)s;
+		s++;
+	}
+	if (*s == k)
+		return ((char *)s);
+	return (save);
 }

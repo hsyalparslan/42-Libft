@@ -1,25 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: harslan <harslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/13 17:09:07 by harslan           #+#    #+#             */
-/*   Updated: 2022/08/13 17:46:07 by harslan          ###   ########.fr       */
+/*   Created: 2022/08/13 17:07:20 by harslan           #+#    #+#             */
+/*   Updated: 2022/08/13 17:44:00 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	n;
-
-	n = 0;
-	while (c[n] != '\0')
+	if (n == -2147483648)
 	{
-		n++;
+		ft_putchar_fd('-', fd);
+		ft_putchar_fd('2', fd);
+		n = 147483648;
 	}
-	return (n);
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n *= -1;
+	}
+	if (n >= 0 && n <= 9)
+	{
+		ft_putchar_fd(n + 48, fd);
+	}
+	if (n > 9)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
 }

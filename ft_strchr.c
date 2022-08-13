@@ -1,14 +1,29 @@
-#include <unistd.h>
-char *ft_strchr(const char *s, int c);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: harslan <harslan@student.42istanbul.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/13 17:07:44 by harslan           #+#    #+#             */
+/*   Updated: 2022/08/13 17:43:30 by harslan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char	*ft_strchr(const char *s, int c)
 {
-    size_t i;
-    k = (char)c;
-    i = 0;
-    while (s[i] != '\0')
-    {
-        if (s[i] == k)
-            return((char *)s + i);
-        i++;
-    }
-    return(0);
+	char	k;
+
+	k = c;
+	while (*s)
+	{
+		if (*s == k)
+			return ((char *)s);
+		s++;
+	}
+	if (*s == k)
+		return ((char *)s);
+	return (NULL);
 }
