@@ -1,1 +1,1 @@
-# 42 Main Course - Libft project
+# 42 Libft project
