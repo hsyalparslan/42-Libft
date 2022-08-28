@@ -6,7 +6,7 @@
 /*   By: harslan <harslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 17:05:31 by harslan           #+#    #+#             */
-/*   Updated: 2022/08/13 17:17:54 by harslan          ###   ########.fr       */
+/*   Updated: 2022/08/15 22:50:25 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ static int	ft_div(int len)
 		return (1);
 	while (len > 1)
 	{
-	i *= 10;
-	len--;
+		i *= 10;
+		len--;
 	}
 	return (i);
 }

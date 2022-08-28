@@ -6,7 +6,7 @@
 /*   By: harslan <harslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 17:07:38 by harslan           #+#    #+#             */
-/*   Updated: 2022/08/13 17:37:22 by harslan          ###   ########.fr       */
+/*   Updated: 2022/08/28 18:44:36 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,18 +55,6 @@ char	*worddup(char *s, char c)
 	}
 	word[i] = '\0';
 	return (word);
-}
-
-int	wordlen(char *s, int c)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] && s[i] != c)
-	{
-		i++;
-	}
-	return (i);
 }
 
 char	**ft_split(char const *s, char c)
