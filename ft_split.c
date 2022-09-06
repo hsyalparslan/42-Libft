@@ -6,20 +6,20 @@
 /*   By: harslan <harslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 17:07:38 by harslan           #+#    #+#             */
-/*   Updated: 2022/09/06 16:18:51 by harslan          ###   ########.fr       */
+/*   Updated: 2022/09/06 19:09:10 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	seperator(char s, char c)
+#include <stdio.h>
+static int	seperator(char s, char c)
 {
 	if (s == c)
 		return (1);
 	return (0);
 }
 
-int	counter(char *str, char c)
+static int	counter(char *str, char c)
 {
 	int	i;
 	int	count;
@@ -38,7 +38,7 @@ int	counter(char *str, char c)
 	return (count);
 }
 
-char	*worddup(char *s, char c)
+static char	*worddup(char *s, char c)
 {
 	char	*word;
 	int		i;
@@ -84,4 +84,10 @@ char	**ft_split(char const *s, char c)
 	}
 	strarray[i] = NULL;
 	return (strarray);
+}
+
+
+int	main(void)
+{
+	printf("%s", ft_split("1234", '2')[0]);
 }
