@@ -6,7 +6,7 @@
 /*   By: harslan <harslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 17:07:38 by harslan           #+#    #+#             */
-/*   Updated: 2022/08/28 18:44:36 by harslan          ###   ########.fr       */
+/*   Updated: 2022/09/06 16:18:51 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,12 +69,12 @@ char	**ft_split(char const *s, char c)
 	count = counter(str, c);
 	strarray = (char **)malloc(sizeof(char *) * (count + 1));
 	if (!strarray)
-		return (0);
+		return (NULL);
 	while (*str)
 	{
 		while (*str && seperator(*str, c))
 			str++;
-		if (*str && !seperator(*str, c))
+		if (*str)
 		{
 			strarray[i] = worddup(str, c);
 			i++;
