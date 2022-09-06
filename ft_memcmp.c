@@ -6,12 +6,12 @@
 /*   By: harslan <harslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 17:05:57 by harslan           #+#    #+#             */
-/*   Updated: 2022/08/13 17:44:51 by harslan          ###   ########.fr       */
+/*   Updated: 2022/09/06 19:45:45 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+#include <stdio.h>
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t			i;
@@ -28,4 +28,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		i++;
 	}
 	return (0);
+}
+
+int	main(void) {
+	printf("%d", ft_memcmp("ABC", "ABC", 3));
 }

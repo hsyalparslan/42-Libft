@@ -6,11 +6,12 @@
 /*   By: harslan <harslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 17:05:31 by harslan           #+#    #+#             */
-/*   Updated: 2022/08/15 22:50:25 by harslan          ###   ########.fr       */
+/*   Updated: 2022/09/06 19:43:03 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	ft_len(long nbr)
 {
@@ -71,4 +72,8 @@ char	*ft_itoa(int n)
 		res[i++] = (((n2 / (ft_div(len--)) % 10) + 48));
 	res[i] = '\0';
 	return (res);
+}
+
+int	main(void) {
+	printf("%s", ft_itoa(555));
 }

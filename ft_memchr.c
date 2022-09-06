@@ -6,12 +6,12 @@
 /*   By: harslan <harslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 17:05:44 by harslan           #+#    #+#             */
-/*   Updated: 2022/08/13 17:33:58 by harslan          ###   ########.fr       */
+/*   Updated: 2022/09/06 19:44:24 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+#include <stdio.h>s
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t			i;
@@ -28,4 +28,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	if (str[i] == k && n)
 		return (&str[i]);
 	return (0);
+}
+
+int	main(void) {
+	char *s = "Abcdde";
+	printf(ft_memchr(s, 'd', 5));
 }
