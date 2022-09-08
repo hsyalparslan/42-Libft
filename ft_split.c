@@ -6,12 +6,12 @@
 /*   By: harslan <harslan@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 17:07:38 by harslan           #+#    #+#             */
-/*   Updated: 2022/09/06 19:09:10 by harslan          ###   ########.fr       */
+/*   Updated: 2022/09/08 03:18:08 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+
 static int	seperator(char s, char c)
 {
 	if (s == c)
@@ -84,10 +84,4 @@ char	**ft_split(char const *s, char c)
 	}
 	strarray[i] = NULL;
 	return (strarray);
-}
-
-
-int	main(void)
-{
-	printf("%s", ft_split("1234", '2')[0]);
 }
